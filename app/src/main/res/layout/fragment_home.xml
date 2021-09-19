@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradient"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/card_margin_horizontal"
+        android:layout_marginTop="@dimen/card_margin_top"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_point"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/poinIcon_margin_start"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pointText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="700"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/pointText_margin_start"
+                app:layout_constraintBottom_toTopOf="@id/puanText"
+                app:layout_constraintStart_toEndOf="@+id/point"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/puanText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/point"
+                app:layout_constraintTop_toBottomOf="@+id/pointText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/pointText"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/levelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 Level"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/levelText_margin_end"
+                android:layout_marginTop="@dimen/levelText_margin_top"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="85dp"
+                android:layout_height="8dp"
+                android:progress="3"
+                android:max="10"
+                android:progressDrawable="@drawable/progress_bar"
+                app:layout_constraintTop_toBottomOf="@id/levelText"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/progressbar_margin_end"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_level"
+                app:layout_constraintEnd_toStartOf="@+id/levelText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/levelIcon_margin_end"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/playerImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_man_woman"
+        app:layout_constraintTop_toBottomOf="@+id/cardText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/players_margin_top"
+        android:layout_marginStart="@dimen/players_margin_start"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/playerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/two_player"
+        android:textSize="@dimen/two_player_text_size"
+        android:textColor="@color/two_player_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerImage"
+        android:layout_marginTop="@dimen/twoplayer_margin_top"
+        android:layout_marginEnd="@dimen/twoplayer_margin_end"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playnowbutton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerText"
+        android:layout_marginEnd="@dimen/play_button_end"
+        android:layout_marginTop="@dimen/play_button_top"
+        android:text="@string/play_now"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/play_now"
+        android:drawableRight="@drawable/ic_rightarrow"
+        android:paddingEnd="@dimen/button_padding_end"
+        android:paddingStart="@dimen/button_padding_start"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        app:layout_constraintTop_toBottomOf="@id/playnowbutton"
+        android:layout_marginTop="@dimen/line_margin_top"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/woman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_woman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        android:layout_marginTop="@dimen/player_image_top"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/soloPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/solo_player"
+        android:textSize="@dimen/solo_player_text_size"
+        android:textColor="@color/solo_player_text_color"
+        app:layout_constraintBottom_toBottomOf="@+id/woman"
+        android:layout_marginBottom="@dimen/solo_player_bottom"
+        android:layout_marginEnd="@dimen/solo_player_end"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playnowbutton1"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_background1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soloPlayer"
+        android:layout_marginTop="@dimen/play_button_top"
+        android:layout_marginEnd="@dimen/play_button_end"
+        android:text="@string/play_now"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textSize="@dimen/play_now"
+        android:drawableRight="@drawable/ic_rightblackarrowblack"
+        android:paddingEnd="@dimen/button_padding_end"
+        android:paddingStart="@dimen/button_padding_start"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

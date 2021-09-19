@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Battle"
+        android:id="@+id/homeFragment3"
+        android:icon="@drawable/ic_battlebutton_con"
+        android:menuCategory="secondary"/>
+    <item
+        android:title="Decklerim"
+        android:id="@+id/decksFragment"
+        android:icon="@drawable/ic_deckbutton_con"
+        android:iconTint="@color/bottomnavigation_color"
+        android:menuCategory="secondary"/>
+    <item
+        android:title="Profile"
+        android:id="@+id/profileFragment3"
+        android:icon="@drawable/ic_profilebutton_con"
+        android:iconTint="@color/bottomnavigation_color"
+        android:menuCategory="secondary"/>
+</menu>

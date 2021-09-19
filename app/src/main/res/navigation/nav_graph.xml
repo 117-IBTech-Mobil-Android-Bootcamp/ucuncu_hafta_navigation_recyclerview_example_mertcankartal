@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/decksFragment"
+        android:name="com.example.deckyhomework3.fragments.DecksFragment"
+        android:label="fragment_decks"
+        tools:layout="@layout/fragment_decks" >
+        <action
+            android:id="@+id/action_decksFragment_to_profileFragment3"
+            app:destination="@id/profileFragment3" />
+        <action
+            android:id="@+id/action_decksFragment_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment3"
+        android:name="com.example.deckyhomework3.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment3_to_decksFragment"
+            app:destination="@id/decksFragment" />
+        <action
+            android:id="@+id/action_profileFragment3_to_recyclerviewFragment"
+            app:destination="@id/recyclerviewFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:popExitAnim="@anim/slide_out_up" />
+        <action
+            android:id="@+id/action_profileFragment3_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment3"
+        android:name="com.example.deckyhomework3.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment3_to_decksFragment"
+            app:destination="@id/decksFragment" />
+        <action
+            android:id="@+id/action_homeFragment3_to_profileFragment3"
+            app:destination="@id/profileFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.deckyhomework3.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment3"
+            app:destination="@id/homeFragment3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/recyclerviewFragment"
+        android:name="com.example.deckyhomework3.fragments.RecyclerviewFragment"
+        android:label="fragment_recyclerview"
+        tools:layout="@layout/fragment_recyclerview" />
+</navigation>

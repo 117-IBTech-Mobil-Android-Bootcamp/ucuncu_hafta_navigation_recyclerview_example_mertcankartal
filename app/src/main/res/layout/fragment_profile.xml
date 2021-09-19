@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradient2"
+    tools:context=".fragments.ProfileFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_whats_decky"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/whatsdecky_margin_start"
+        android:layout_marginTop="@dimen/whatsdecky_margin_top"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/logout_margin_end"
+        android:layout_marginTop="@dimen/logout_margin_top"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/profilePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/profile_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/profilePhoto_margin_top"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile_photo"
+        app:layout_constraintTop_toTopOf="@id/profilePhoto"
+        app:layout_constraintEnd_toEndOf="@id/profilePhoto"
+        app:layout_constraintStart_toStartOf="@id/profilePhoto"
+        app:layout_constraintBottom_toBottomOf="@id/profilePhoto"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_premium"
+        app:layout_constraintStart_toStartOf="@+id/profilePhoto"
+        app:layout_constraintTop_toTopOf="@+id/profilePhoto"
+        app:layout_constraintBottom_toBottomOf="@+id/profilePhoto"
+        android:layout_marginStart="@dimen/premium_margin_start"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Doe"
+        android:textSize="@dimen/name_text_size"
+        android:textColor="@color/name_text_color"
+        app:layout_constraintTop_toBottomOf="@id/profilePhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/name_margin_top"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/editAvatarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintTop_toTopOf="@id/name"
+        android:layout_marginStart="@dimen/edit_margin_start"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/battle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_battlebig"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintEnd_toStartOf="@+id/success"
+        android:layout_marginTop="@dimen/success_battle_top"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_successbig"
+        app:layout_constraintStart_toEndOf="@id/battle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/success_battle_top"
+        android:layout_marginStart="@dimen/success_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/battleScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textSize="@dimen/battle_score_text_size"
+        android:textColor="@color/battleScore_text_color"
+        app:layout_constraintTop_toBottomOf="@+id/battle"
+        app:layout_constraintStart_toStartOf="@+id/battle"
+        app:layout_constraintEnd_toEndOf="@+id/battle"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/battleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Battle"
+        android:textSize="@dimen/battle_text_size"
+        android:textColor="@color/battletext_text_color"
+        app:layout_constraintTop_toBottomOf="@+id/battleScore"
+        app:layout_constraintStart_toStartOf="@+id/battleScore"
+        app:layout_constraintEnd_toEndOf="@+id/battleScore"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/successScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:textSize="@dimen/battle_score_text_size"
+        android:textColor="@color/successScore_color"
+        app:layout_constraintTop_toBottomOf="@+id/success"
+        app:layout_constraintStart_toStartOf="@+id/success"
+        app:layout_constraintEnd_toEndOf="@+id/success"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/successText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Başarı"
+        android:textSize="@dimen/battle_text_size"
+        android:textColor="@color/battletext_text_color"
+        app:layout_constraintTop_toBottomOf="@+id/successScore"
+        app:layout_constraintStart_toStartOf="@+id/successScore"
+        app:layout_constraintEnd_toEndOf="@+id/successScore"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/followus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/follow_us"
+        android:textColor="@color/follow_color"
+        android:textSize="@dimen/follow_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/battleScore"
+        android:layout_marginTop="@dimen/follow_us_margin_top"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/follow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/follows_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/follow2"
+        app:layout_constraintTop_toBottomOf="@+id/followus"
+        android:layout_marginTop="@dimen/follow_icons_margin_top"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_linkedin_photo"
+        app:layout_constraintTop_toTopOf="@+id/follow1"
+        app:layout_constraintBottom_toBottomOf="@+id/follow1"
+        app:layout_constraintStart_toStartOf="@+id/follow1"
+        app:layout_constraintEnd_toEndOf="@+id/follow1"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/follow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/follows_background"
+        android:layout_marginTop="@dimen/follow_icons_margin_top"
+        android:layout_marginStart="@dimen/follow_icons_margin_start"
+        app:layout_constraintStart_toEndOf="@id/follow1"
+        app:layout_constraintEnd_toStartOf="@+id/follow3"
+        app:layout_constraintTop_toBottomOf="@+id/followus"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_instagram_logo"
+        app:layout_constraintTop_toTopOf="@+id/follow2"
+        app:layout_constraintBottom_toBottomOf="@+id/follow2"
+        app:layout_constraintStart_toStartOf="@+id/follow2"
+        app:layout_constraintEnd_toEndOf="@+id/follow2"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/follow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/follows_background"
+        android:layout_marginTop="@dimen/follow_icons_margin_top"
+        android:layout_marginStart="@dimen/follow_icons_margin_start"
+        app:layout_constraintStart_toEndOf="@id/follow2"
+        app:layout_constraintEnd_toStartOf="@id/follow4"
+        app:layout_constraintTop_toBottomOf="@+id/followus"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_facebooklogo"
+        app:layout_constraintTop_toTopOf="@+id/follow3"
+        app:layout_constraintBottom_toBottomOf="@+id/follow3"
+        app:layout_constraintStart_toStartOf="@+id/follow3"
+        app:layout_constraintEnd_toEndOf="@+id/follow3"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/follow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/follows_background"
+        android:layout_marginTop="@dimen/follow_icons_margin_top"
+        android:layout_marginStart="@dimen/follow_icons_margin_start"
+        app:layout_constraintStart_toEndOf="@id/follow3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/followus"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_twitterlogo"
+        app:layout_constraintTop_toTopOf="@+id/follow4"
+        app:layout_constraintBottom_toBottomOf="@+id/follow4"
+        app:layout_constraintStart_toStartOf="@+id/follow4"
+        app:layout_constraintEnd_toEndOf="@+id/follow4"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

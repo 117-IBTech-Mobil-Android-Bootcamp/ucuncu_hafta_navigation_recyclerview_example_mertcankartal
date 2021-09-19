@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="logo_margin_bottom">80dp</dimen>
+    <dimen name="play_button_end">12dp</dimen>
+    <dimen name="play_button_top">8dp</dimen>
+    <dimen name="solo_player_end">12dp</dimen>
+    <dimen name="solo_player_bottom">48dp</dimen>
+    <dimen name="player_image_top">48dp</dimen>
+    <dimen name="line_margin_top">24dp</dimen>
+    <dimen name="twoplayer_margin_top">10dp</dimen>
+    <dimen name="twoplayer_margin_end">12dp</dimen>
+    <dimen name="players_margin_start">8dp</dimen>
+    <dimen name="players_margin_top">24dp</dimen>
+    <dimen name="levelIcon_margin_end">4dp</dimen>
+    <dimen name="progressbar_margin_end">8dp</dimen>
+    <dimen name="levelText_margin_end">40dp</dimen>
+    <dimen name="levelText_margin_top">12dp</dimen>
+    <dimen name="pointText_margin_start">8dp</dimen>
+    <dimen name="poinIcon_margin_start">24dp</dimen>
+    <dimen name="card_margin_top">30dp</dimen>
+    <dimen name="card_margin_horizontal">20dp</dimen>
+    <dimen name="whatsdecky_margin_top">24dp</dimen>
+    <dimen name="whatsdecky_margin_start">12dp</dimen>
+    <dimen name="logout_margin_top">24dp</dimen>
+    <dimen name="logout_margin_end">12dp</dimen>
+    <dimen name="profilePhoto_margin_top">72dp</dimen>
+    <dimen name="name_margin_top">8dp</dimen>
+    <dimen name="edit_margin_start">8dp</dimen>
+    <dimen name="success_margin_start">16dp</dimen>
+    <dimen name="follow_us_margin_top">64dp</dimen>
+    <dimen name="success_battle_top">12dp</dimen>
+    <dimen name="follow_icons_margin_top">15dp</dimen>
+    <dimen name="follow_icons_margin_start">10dp</dimen>
+    <dimen name="bottomnavi_margin_bottom">6dp</dimen>
+    <dimen name="bottomnavi_margin_horizontal">20dp</dimen>
+    <dimen name="avatar_name_margin_top">15dp</dimen>
+    <dimen name="premium_margin_start">108dp</dimen>
+
+    <!-- PADDING -->
+
+    <dimen name="button_padding_end">25dp</dimen>
+    <dimen name="button_padding_start">20dp</dimen>
+
+    <!--TEXT SIZE-->
+    <dimen name="empty_text">18sp</dimen>
+    <dimen name="empty_title">32sp</dimen>
+    <dimen name="play_now">18sp</dimen>
+    <dimen name="solo_player_text_size">28sp</dimen>
+    <dimen name="two_player_text_size">28sp</dimen>
+    <dimen name="name_text_size">32sp</dimen>
+    <dimen name="battle_score_text_size">32sp</dimen>
+    <dimen name="battle_text_size">16sp</dimen>
+    <dimen name="follow_text_size">16sp</dimen>
+    <dimen name="avatar_name">24sp</dimen>
+
+</resources>
